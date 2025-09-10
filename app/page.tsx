@@ -1,5 +1,6 @@
 'use client';
 
+// CalAIM Healthcare Platform - Live Deployment
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
