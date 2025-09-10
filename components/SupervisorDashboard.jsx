@@ -239,12 +239,12 @@ export default function SupervisorDashboard() {
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={mockChartData.complianceTrend}>
                       <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="labels" />
+                      <XAxis dataKey="month" />
                       <YAxis />
                       <Tooltip />
                       <Line 
                         type="monotone" 
-                        dataKey="data" 
+                        dataKey="compliance" 
                         stroke="#10B981" 
                         strokeWidth={3}
                         dot={{ fill: '#10B981', strokeWidth: 2, r: 4 }}
@@ -313,10 +313,10 @@ export default function SupervisorDashboard() {
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={mockChartData.teamPerformance}>
                       <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="labels" />
+                      <XAxis dataKey="name" />
                       <YAxis />
                       <Tooltip />
-                      <Bar dataKey="data" fill="#2563EB" />
+                      <Bar dataKey="compliance" fill="#2563EB" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -406,10 +406,10 @@ export default function SupervisorDashboard() {
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={mockChartData.visitVolume}>
                       <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="labels" />
+                      <XAxis dataKey="day" />
                       <YAxis />
                       <Tooltip />
-                      <Bar dataKey="data" fill="#2563EB" />
+                      <Bar dataKey="visits" fill="#2563EB" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>

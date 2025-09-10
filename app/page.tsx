@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -244,13 +245,23 @@ export default function SupportSyncPage() {
         </div>
       </motion.div>
 
-      {/* Demo Mode Notice */}
-      <div className="bg-yellow-50 border-t border-yellow-200 py-4">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-yellow-800">
-            <strong>Demo Mode:</strong> This is a demonstration of the Support Sync platform. 
-            All data shown is simulated and no real patient information is used.
-          </p>
+      {/* Demo Mode Notice & Footer */}
+      <div className="bg-yellow-50 border-t border-yellow-200 py-6">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <p className="text-sm text-yellow-800">
+              <strong>Demo Mode:</strong> This is a demonstration of the Support Sync platform. 
+              All data shown is simulated and no real patient information is used.
+            </p>
+          </div>
+          <div className="text-center">
+            <Link 
+              href="/privacy" 
+              className="text-sm text-gray-600 hover:text-gray-900 underline font-medium"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </div>

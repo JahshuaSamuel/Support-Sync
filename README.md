@@ -241,10 +241,31 @@ colors: {
 
 ## 🚀 Deployment
 
-### Production Build
+### GitHub Pages (Recommended)
+
+This project is configured for automatic deployment to GitHub Pages:
+
+1. **Push to GitHub**: Push your code to the `main` branch
+2. **Automatic Deployment**: GitHub Actions will automatically build and deploy
+3. **Live Site**: Your site will be available at `https://[username].github.io/Support-Sync`
+
+### Manual Deployment
+
+#### Option 1: Using GitHub Actions (Automatic)
 ```bash
+# Push to main branch - deployment happens automatically
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push origin main
+```
+
+#### Option 2: Manual Build and Deploy
+```bash
+# Build the project
 npm run build
-npm run start
+
+# Deploy to GitHub Pages
+npm run deploy
 ```
 
 ### Environment Variables
@@ -253,6 +274,19 @@ Create `.env.local` for production configuration:
 NEXT_PUBLIC_API_URL=your_api_url
 NEXT_PUBLIC_ANALYTICS_ID=your_analytics_id
 ```
+
+### GitHub Pages Setup
+
+1. Go to your repository settings
+2. Navigate to "Pages" section
+3. Set source to "GitHub Actions"
+4. The workflow will automatically deploy on every push to main
+
+### Custom Domain (Optional)
+To use a custom domain:
+1. Add your domain to `.github/workflows/deploy.yml` in the `cname` field
+2. Create a `CNAME` file with your domain name
+3. Configure DNS settings with your domain provider
 
 ## 📈 Analytics & Monitoring
 

@@ -168,42 +168,32 @@ export const mockComplianceData = {
   }
 };
 
-// Mock chart data for visualizations
+// Mock chart data for visualizations (Recharts format)
 export const mockChartData = {
-  complianceTrend: {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [{
-      label: 'Compliance Rate (%)',
-      data: [94.2, 95.1, 96.8, 97.3, 98.1, 98.5],
-      borderColor: '#10B981',
-      backgroundColor: 'rgba(16, 185, 129, 0.1)',
-      tension: 0.4
-    }]
-  },
-  visitVolume: {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-      label: 'Visits Completed',
-      data: [23, 28, 31, 26, 29, 18, 12],
-      backgroundColor: '#2563EB',
-      borderColor: '#1D4ED8',
-      borderWidth: 1
-    }]
-  },
-  teamPerformance: {
-    labels: ['Sarah Chen', 'Mike Torres', 'Lisa Park', 'David Kim', 'Anna Lee'],
-    datasets: [{
-      label: 'Compliance Rate (%)',
-      data: [98, 100, 97, 96, 99],
-      backgroundColor: [
-        '#10B981',
-        '#059669',
-        '#34D399',
-        '#6EE7B7',
-        '#A7F3D0'
-      ]
-    }]
-  }
+  complianceTrend: [
+    { month: 'Jan', compliance: 94.2 },
+    { month: 'Feb', compliance: 95.1 },
+    { month: 'Mar', compliance: 96.8 },
+    { month: 'Apr', compliance: 97.3 },
+    { month: 'May', compliance: 98.1 },
+    { month: 'Jun', compliance: 98.5 }
+  ],
+  visitVolume: [
+    { day: 'Mon', visits: 23 },
+    { day: 'Tue', visits: 28 },
+    { day: 'Wed', visits: 31 },
+    { day: 'Thu', visits: 26 },
+    { day: 'Fri', visits: 29 },
+    { day: 'Sat', visits: 18 },
+    { day: 'Sun', visits: 12 }
+  ],
+  teamPerformance: [
+    { name: 'Sarah Chen', compliance: 98, color: '#10B981' },
+    { name: 'Mike Torres', compliance: 100, color: '#059669' },
+    { name: 'Lisa Park', compliance: 97, color: '#34D399' },
+    { name: 'David Kim', compliance: 96, color: '#6EE7B7' },
+    { name: 'Anna Lee', compliance: 99, color: '#A7F3D0' }
+  ]
 };
 
 // Mock voice transcription data
