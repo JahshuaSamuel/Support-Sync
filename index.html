@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Sync - CalAIM Healthcare Platform | Investor Presentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section with iPhone Mockup -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        CalAIM Compliant Platform
+                    </div>
+                    <h1>Support Sync</h1>
+                    <p class="hero-subtitle">Revolutionary voice-powered documentation platform for CalAIM healthcare compliance</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time Monitoring</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>AI-Powered Transcription</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- iPhone Mockup -->
+                <div class="iphone-mockup">
+                    <div class="iphone-frame">
+                        <div class="iphone-screen">
+                            <!-- iPhone Notch -->
+                            <div class="iphone-notch"></div>
+                            
+                            <!-- App Content - MUST BE BELOW NOTCH -->
+                            <div class="app-content">
+                                <!-- Status Bar -->
+                                <div class="status-bar">
+                                    <span class="time">9:41</span>
+                                    <div class="status-icons">
+                                        <i class="fas fa-signal"></i>
+                                        <i class="fas fa-wifi"></i>
+                                        <i class="fas fa-battery-three-quarters"></i>
+                                    </div>
+                                </div>
+
+                                <!-- App Header -->
+                                <div class="app-header">
+                                    <h2>Support Sync</h2>
+                                    <p>CalAIM Compliance Documentation</p>
+                                </div>
+
+                                <!-- Patient Info Card -->
+                                <div class="patient-card">
+                                    <div class="patient-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="patient-info">
+                                        <h3>Maria Rodriguez</h3>
+                                        <p>Housing Support - H0043</p>
+                                        <div class="patient-status">
+                                            <span class="status-badge high-risk">High Risk</span>
+                                            <span class="visit-time">Visit Started 2 min ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Voice Recording Interface -->
+                                <div class="voice-interface">
+                                    <div class="transcription-area" id="transcriptionArea">
+                                        <div class="transcription-placeholder">
+                                            <i class="fas fa-microphone-slash"></i>
+                                            <p>Tap the microphone to start documenting this visit...</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="voice-controls">
+                                        <button class="mic-button" id="micButton">
+                                            <i class="fas fa-microphone"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Quick Actions -->
+                                <div class="quick-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-home"></i>
+                                        <span>Housing Assessment</span>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Add Photo</span>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-file-medical"></i>
+                                        <span>Care Plan</span>
+                                    </button>
+                                </div>
+
+                                <!-- CalAIM Compliance Status -->
+                                <div class="compliance-status">
+                                    <div class="compliance-header">
+                                        <i class="fas fa-clipboard-check"></i>
+                                        <span>CalAIM Compliance</span>
+                                    </div>
+                                    <div class="compliance-items">
+                                        <div class="compliance-item completed">
+                                            <i class="fas fa-check"></i>
+                                            <span>Patient Consent</span>
+                                        </div>
+                                        <div class="compliance-item completed">
+                                            <i class="fas fa-check"></i>
+                                            <span>Service Code H0043</span>
+                                        </div>
+                                        <div class="compliance-item pending">
+                                            <i class="fas fa-clock"></i>
+                                            <span>Visit Documentation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supervisor Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Supervisor Dashboard</h2>
+                <p>Live team monitoring & CalAIM compliance tracking</p>
+                <div class="dashboard-controls">
+                    <div class="live-indicator">
+                        <div class="pulse-dot"></div>
+                        <span>Live</span>
+                    </div>
+                    <button class="refresh-btn" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Metrics Cards -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-value" id="activeRecordings">12</h3>
+                        <p class="metric-label">Active Recordings</p>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-value" id="complianceRate">98.5%</h3>
+                        <p class="metric-label">Compliance Rate</p>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+2.1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-value" id="documentationCompletion">94.2%</h3>
+                        <p class="metric-label">Documentation</p>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+1.8%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-value" id="staffUtilization">87.3%</h3>
+                        <p class="metric-label">Staff Utilization</p>
+                        <div class="metric-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+5.2%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts and Data Section -->
+            <div class="dashboard-content">
+                <!-- Compliance Trend Chart -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Compliance Trend</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active">7D</button>
+                            <button class="chart-btn">30D</button>
+                            <button class="chart-btn">90D</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="complianceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Team Performance Chart -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Team Performance</h3>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="teamChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Live Activity Feed -->
+                <div class="activity-feed">
+                    <div class="feed-header">
+                        <h3>Live Activity Feed</h3>
+                        <div class="feed-controls">
+                            <button class="filter-btn active">All</button>
+                            <button class="filter-btn">Visits</button>
+                            <button class="filter-btn">Alerts</button>
+                        </div>
+                    </div>
+                    <div class="feed-content" id="activityFeed">
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Sarah Chen completed visit</h4>
+                                <p>Maria Rodriguez - Housing Support H0043</p>
+                                <span class="activity-time">2 min ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon active">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Mike Torres started documentation</h4>
+                                <p>James Wilson - Enhanced Care Management</p>
+                                <span class="activity-time">5 min ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Compliance alert triggered</h4>
+                                <p>2 visits pending documentation review</p>
+                                <span class="activity-time">8 min ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CalAIM Compliance Section -->
+    <section class="compliance-section">
+        <div class="container">
+            <div class="compliance-header">
+                <h2>CalAIM Compliance Excellence</h2>
+                <p>Built specifically for CalAIM healthcare providers with full DHCS reporting compliance</p>
+            </div>
+            <div class="compliance-metrics">
+                <div class="compliance-metric">
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">DHCS Reporting Compliance</div>
+                </div>
+                <div class="compliance-metric">
+                    <div class="metric-number">98.5%</div>
+                    <div class="metric-label">MCP Contract Compliance</div>
+                </div>
+                <div class="compliance-metric">
+                    <div class="metric-number">96.1%</div>
+                    <div class="metric-label">HIE Data Exchange</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Mode Notice -->
+    <div class="demo-notice">
+        <div class="container">
+            <p>
+                <strong>Demo Mode:</strong> This is a demonstration of the Support Sync platform. 
+                All data shown is simulated and no real patient information is used.
+            </p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
